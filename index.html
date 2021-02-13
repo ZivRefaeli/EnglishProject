@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- 
+    TODO:
+        1. create the video of the trial
+        2. add the video
+        3. add the trivia
+        
+        Great Job!
+-->
+
+<html>
+    <head>
+        <title>English Project</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="title" class="center">
+            <b>English Project</b>
+        </div>
+        <div id="left-content">
+            <div id="main" class="center">
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><a onclick="set_page('pages/introduction.html')">Introduction</a></th>
+                            </tr>
+                            <tr>
+                                <th><a onclick="set_page('pages/all_my_sons.html')">All My Sons</a></th>
+                            </tr>
+                            <tr>
+                                <th><a onclick="set_page('pages/personal_parts.html')">Personal Parts</a></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="creator" class="center">
+                Created By: Ziv Refaeli
+            </div>
+        </div>
+        <div id="content" class="center">
+            <iframe id="frame" src="pages/introduction.html" frameBorder="0"></iframe>
+        </div>
+
+        <script>
+            const frame_contnet = document.getElementById("frame")
+
+            let set_page = (url) => {
+                frame_contnet.src = url
+            }
+        </script>
+    </body>
+</html>

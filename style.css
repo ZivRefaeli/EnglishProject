@@ -1,0 +1,127 @@
+:root {
+    --title_height: 15vh;
+    --left_width: 20vw;
+    --title_size: 200%;
+    --content_size: 150%;
+    --sub_title_size: 165%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--title_height);
+
+    background-color: lightblue;
+    font-size: var(--title_size);
+}
+
+#title b{
+    font-family: 'Baskerville Old Face';
+    color: #4c6765;
+    font-size: 160%;
+}
+
+#left-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: var(--left_width);
+    height: calc(100vh - var(--title_height));
+
+    background-color: #400575;
+}
+
+#content {
+    position: relative;
+    top: calc(var(--title_height) - 100vh);
+    left: var(--left_width);
+    width: calc(100vw - var(--left_width));
+    height: calc(100vh - var(--title_height));
+
+    background-color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#creator {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: rgb(234 210 36);
+    text-shadow: -2px 2px 6px black;
+    font-size: var(--content_size);
+    font-family: 'Times';
+    cursor: pointer;
+}
+
+#creator:hover {
+    animation: creator_show 1s 1 forwards;
+}
+
+@keyframes creator_show {
+    from {
+        text-shadow: -2px 2px 6px black;
+    }
+
+    to {
+        text-shadow: -2px 2px 6px rgb(243, 240, 92);
+    }
+}
+
+#main {
+    width: 100%;
+    height: 90%;
+}
+
+a {
+    color: #274db9;
+}
+
+a:hover {
+    color: lightblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+th {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    font-family: 'Baskerville Old Face';
+}
+
+th:hover {
+    animation: show 0.5s 1 forwards;
+}
+
+@keyframes show {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
